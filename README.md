@@ -33,7 +33,7 @@ I like ML projects where you can measure whether the thing actually works: a che
 
 **[neural-chess-eval](https://github.com/antony0167/neural-chess-eval)**
 
-A small NNUE-style network that evaluates chess positions. It's trained on 600k positions labelled by Stockfish, runs inside my own alpha-beta search with incremental updates, and is tested in engine-vs-engine matches with Elo and confidence intervals.
+A small NNUE-style network that evaluates chess positions. It's trained on 600k positions labelled by Stockfish, runs inside my own alpha-beta search with incremental updates, and is tested in engine-vs-engine matches with Elo and confidence intervals. Its error against Stockfish is 36% lower than hand-tuned piece-square tables, yet over 200 games it only plays level with them. The README digs into why.
 
 `PyTorch` `NumPy` `python-chess`
 
@@ -42,7 +42,7 @@ A small NNUE-style network that evaluates chess positions. It's trained on 600k 
 
 **[paper-rag](https://github.com/antony0167/paper-rag)**
 
-Question answering over arXiv papers with cited answers. It combines hybrid BM25 + embedding search, a cross-encoder reranker, and an evaluation harness that compares four retrievers and RAG against closed-book answers. Includes a hard cost cap for paid APIs.
+Question answering over arXiv papers with cited answers. It combines hybrid BM25 + embedding search, a cross-encoder reranker, and an evaluation harness that compares four retrievers and RAG against closed-book answers. Includes a hard cost cap for paid APIs. The surprise: on this corpus, plain BM25 beat both the embeddings and the reranker.
 
 `sentence-transformers` `FastAPI` `Docker`
 
